@@ -1,6 +1,5 @@
 VVVV.Plugins
 ============
-
 plugins for vvvv
 
 
@@ -12,11 +11,9 @@ Print - prints a texture
 Printer - returns information about specific printer or all available printers
 
 
+
 EXEC
-===================================================================================================================
-
-
-
+============
 EXEC plugin executes a program with given command-line arguments and output the results (StdOut), errors(StdErr), 
 Process ID, the current status of the program and the exit code.
 
@@ -26,3 +23,14 @@ before you start the process.
 In parallel mode you can force the program to stop with the kill pin.
 
 Useful for running a program in the background and capture real time the output, useful for progress report or so..
+
+
+
+HostAddress
+============
+HostAddress node can be used to find the IP of a host machine (convert host to IP) or 
+domain name (convert domain name to one or more ip addresses)
+
+spreadable
+non-blocking
+help patch
