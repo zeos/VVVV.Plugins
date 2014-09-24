@@ -19,7 +19,7 @@ using VVVV.Core.Logging;
 namespace VVVV.Nodes
 {
 	#region PluginInfo
-	[PluginInfo(Name = "Print", Category = "Texture", Help = "Prints a texture", Tags = "print")]
+	[PluginInfo(Name = "Print", AutoEvaluate = true, Category = "Texture", Help = "Prints a texture", Tags = "print")]
 	#endregion PluginInfo
 	public class TexturePrintNode : IPluginEvaluate
 	{
@@ -159,7 +159,7 @@ namespace VVVV.Nodes
 					img = Image.FromStream(new MemoryStream(byteArray));
 					
 					//settings
-					pd.DocumentName = "vvv";
+					pd.DocumentName = "vvvv";
 					pd.OriginAtMargins = true;
 					pd.DefaultPageSettings.Landscape = FLandscape[0];
 					pd.DefaultPageSettings.Color = FColor[0];
@@ -172,7 +172,7 @@ namespace VVVV.Nodes
 							break;
 						}
 					}
-         			
+         			pd.PrintController = new System.Drawing.Printing.StandardPrintController();
 					pd.Print();
 				}	
 				catch (Exception ex)

@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 namespace VVVV.Nodes
 {
 	#region PluginInfo
-	[PluginInfo(Name = "Printer", Category = "Devices", Help = "Basic template with one string in/out", Tags = "")]
+	[PluginInfo(Name = "Printer", AutoEvaluate = true, Category = "Devices", Help = "Basic template with one string in/out", Tags = "")]
 	#endregion PluginInfo
 	public class DevicesPrinterNode : IPluginEvaluate
 	{
